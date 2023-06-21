@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class KafkaProducer {
 
     private final KafkaTemplate<String, String> stringKafkaTemplate;
-    @Value("${kafka.string.topic.name}")
+    @Value("${kafka.topic.name}")
     private String stringTopic;
 
     public void sendAsString(String payload) {

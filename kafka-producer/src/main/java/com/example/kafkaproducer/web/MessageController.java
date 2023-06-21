@@ -15,7 +15,7 @@ public class MessageController {
 
     private final KafkaProducer kafkaProducer;
 
-    @PostMapping("/send_string")
+    @PostMapping("/send")
     public ResponseEntity<Void> sendMessageAsString(@RequestBody String message) {
         kafkaProducer.sendAsString(message);
         return ResponseEntity.noContent().build();
